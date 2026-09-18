@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hex-Upload</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
+<header><div><div class="brand">HEX-UPLOAD</div><p>Simple image uploader</p></div><span class="pill">Vercel</span></header>
+<section class="card">
+<label id="drop" class="drop"><input id="file" type="file" accept="image/*"><div class="arrow">↑</div><b id="pick">Pilih gambar</b><small id="info">PNG, JPG, GIF, WEBP · Maks. 32 MB</small></label>
+<div id="previewBox" class="preview hidden"><img id="preview"><button id="clear" type="button">×</button></div>
+<div class="grid">
+<label>Nama file <span>opsional</span><input id="name" maxlength="120" placeholder="contoh-gambar"></label>
+<label>Durasi <span>opsional</span><select id="expiration"><option value="0">Permanen — jangan hapus otomatis</option><option value="60">1 menit</option><option value="300">5 menit</option><option value="600">10 menit</option><option value="3600">1 jam</option><option value="86400">1 hari</option><option value="604800">7 hari</option><option value="2592000">30 hari</option><option value="7776000">90 hari</option><option value="15552000">180 hari</option></select></label>
+</div>
+<button id="upload" disabled>Upload gambar</button><p id="status"></p>
+</section>
+<section id="result" class="card hidden"><div class="resultTitle"><div><small>BERHASIL</small><h2>Upload selesai</h2></div><strong>✓</strong></div><img id="resultImg" class="resultImg">
+<div id="fields"></div></section>
+<footer>Hex-Upload · Powered by ImgBB</footer>
+</main><script src="/app.js"></script>
+</body></html>
